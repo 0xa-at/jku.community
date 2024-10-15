@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://jku.community"
+base_url = "https://0xa-at.github.io/jku.community"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
