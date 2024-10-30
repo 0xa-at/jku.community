@@ -1,21 +1,21 @@
 {% macro list_posts(pages) %}
 <ul>
     {%- for page in pages %}
-    <li class="list-item">
-    <section>
-        <div class="post-header">
-            <div>
-                <h1 class="title">
-                    <a href={{ page.permalink }}>{{page.title}}</a>
+    <li class="club-item">
+        <section>
+            <div class="club-header">
+                <div>
+                    <h1 class="title">
+                        <a href={{ page.permalink }}>{{page.title}}</a>
 
-                    {% if page.draft %}
-                    <span class="draft-label">DRAFT</span>
-                    {% endif %}
-                </h1>
+                        {% if page.draft %}
+                        <span class="draft-label">DRAFT</span>
+                        {% endif %}
+                    </h1>
+                </div>
             </div>
-        </div>
-    </section>
-  </li>
+        </section>
+    </li>
     {% endfor -%}
 </ul>
 {% endmacro list_posts %}

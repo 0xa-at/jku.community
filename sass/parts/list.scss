@@ -1,0 +1,13 @@
+ul {
+    padding: 0;
+}
+
+li.club-item {
+    list-style-type: none;
+    list-style: none;
+    padding: 0 10px ;
+
+    background-color: var(--bg-1);
+    border: 1px solid var(--border-color);
+    margin: 10px;
+}

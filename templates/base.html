@@ -1,0 +1,98 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# Favicon #}
+    {% if config.extra.favicon %}
+        <link rel="icon" type="image/png" href={{ config.extra.favicon }} />
+    {% endif %}
+
+    {# Font from cdn or disk #}
+    {% if config.extra.use_cdn | default(value=false) %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
+    {% else %}
+        <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
+    {% endif %}
+
+    {# Analytics #}
+    {% if config.extra.analytics.enabled %}
+        {% if config.extra.analytics.umami.website_id %}
+            {% set website_id = config.extra.analytics.umami.website_id %}
+            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://analytics.eu.umami.is") %}
+
+            <script>
+                (function () {
+                    var el = document.createElement('script');
+                    el.setAttribute('src', '/js/imamu.js');
+                    el.setAttribute('data-website-id', '{{ website_id }}');
+                    el.setAttribute('data-host-url', '{{ host_url }}');
+                    document.body.appendChild(el);
+                })();
+                </script>
+            <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
+        {% endif %}
+
+        {% if config.extra.analytics.goatcounter.user %}
+            {% set user = config.extra.analytics.goatcounter.user %}
+            {% set host = config.extra.analytics.goatcounter.host | default(value="goatcounter.com") %}
+
+            <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
+            <noscript>
+                {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
+                <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
+            </noscript>
+        {% endif %}
+    {% endif %}
+
+    {% if config.extra.mathjax | default(value=false) %}
+        {% if config.extra.mathjax_dollar_inline_enable | default(value=false) %}
+            <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+            </script>
+        {% endif %}
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    {% endif %}
+
+    {# RSS #}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+
+    <link rel="stylesheet" type="text/css" media="screen" href={{ get_url(path="main.css") }} />
+
+    {% if config.extra.stylesheets %}
+        {% for stylesheet in config.extra.stylesheets %}
+            <link rel="stylesheet" href="{{ get_url(path=stylesheet) }}">
+        {% endfor %}
+    {% endif %}
+</head>
+
+
+<body>
+    <div class="content">
+        {% include "partials/nav.html" %}
+
+        {# Post page is the default #}
+        {% block main_content %}
+            {% if section.extra.section_path -%}
+                {% set section = get_section(path=section.extra.section_path) %}
+            {% endif -%}
+
+            {{ macros::list_posts(pages=section.pages) }}
+        {% endblock main_content %}
+    </div>
+</body>
+
+</html>
