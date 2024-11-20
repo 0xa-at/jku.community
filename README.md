@@ -9,7 +9,7 @@ Fork the repo and add a new `INSERT_YOUR_CLUB_NAME_HERE.md` file in:
 - `content/linz` for clubs in Linz
 
 The format for the file looks like this: 
-```toml
+```markdown
 +++
 title = "Cool Club"      # Insert the name here
 description = ""         # Optional description
