@@ -1,5 +1,5 @@
 +++
 title = "Neuron.ai"
+link_to = "https://neuron-ai.at"
+category = ["tech"]
 +++
-
-we are neuron.ai

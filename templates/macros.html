@@ -4,15 +4,16 @@
     <li class="club-item">
         <section>
             <div class="club-header">
-                <div>
-                    <h1 class="title">
+                <h2 class="club-title" style="margin-bottom: 0">
+                    <!-- Either link to the page or the website -->
+                    {% if page.link_to %}
+                        <a href={{ page.link_to }}>{{page.title}}</a>
+                    {% else %}
                         <a href={{ page.permalink }}>{{page.title}}</a>
+                    {% endif %}
+                </h2>
 
-                        {% if page.draft %}
-                        <span class="draft-label">DRAFT</span>
-                        {% endif %}
-                    </h1>
-                </div>
+                <p class="description">{{page.description}}</p>
             </div>
         </section>
     </li>

@@ -9,34 +9,37 @@ $text-0: darken($bg-0, 87%);
 $text-1: darken($bg-0, 60%);
 
 :root {
-  --text-0: #{$text-0};
-  --text-1: #{$text-1};
+    --text-0: #{$text-0};
+    --text-1: #{$text-1};
 
-  --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
-  --bg-2: #{$bg-2};
+    --bg-0: #{$bg-0};
+    --bg-1: #{$bg-1};
+    --bg-2: #{$bg-2};
 
-  --border-color: var(--bg-2);
+    --border-color: var(--bg-2);
 
-  --primary-color: #ef5350;
-  --hover-color: white;
+    --primary-color: #ef5350;
+    --hover-color: white;
 
-  // invert colour on hover for consistency
-  .social :hover {
-    filter: invert(1)
-  }
+    // invert colour on hover for consistency
+    .social :hover {
+        filter: invert(1);
+    }
 
-  /* Fonts */
-  --text-font: 'Jetbrains Mono';
-  --header-font: 'Space Grotesk', 'Helvetica', sans-serif;
-  --code-font: 'Jetbrains Mono';
+    /* Fonts */
+    --text-font: "DM Sans";
+    --header-font: "Plus Jakarta Sans", "Helvetica", sans-serif;
+    --code-font: "Jetbrains Mono";
 }
 
 html {
-  background-color: var(--bg-0);
-  color: var(--text-0);
-  font-family: var(--text-font);
-  line-height: 1.6em;
+    background-color: var(--bg-0);
+    color: var(--text-0);
+    line-height: 1.6em;
+
+    font-family: var(--text-font);
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 a {
@@ -45,26 +48,26 @@ a {
 }
 
 .content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 24px;
-  word-wrap: break-word;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    word-wrap: break-word;
 }
 
-@media all and (min-width:640px) {
-  html {
-    font-size: 16.5px;
-  }
+@media all and (min-width: 640px) {
+    html {
+        font-size: 16.5px;
+    }
 }
 
-@media all and (min-width:720px) {
-  html {
-    font-size: 17px;
-  }
+@media all and (min-width: 720px) {
+    html {
+        font-size: 17px;
+    }
 }
 
-@media all and (min-width:960px) {
-  html {
-    font-size: 18px;
-  }
+@media all and (min-width: 960px) {
+    html {
+        font-size: 18px;
+    }
 }
