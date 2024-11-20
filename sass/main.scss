@@ -1,5 +1,6 @@
 @import "parts/nav.scss";
 @import "parts/list.scss";
+@import "parts/misc.scss";
 
 $bg-0: #fff;
 $bg-1: darken($bg-0, 2%);
@@ -18,7 +19,7 @@ $text-1: darken($bg-0, 60%);
 
     --border-color: var(--bg-2);
 
-    --primary-color: #ef5350;
+    --primary-color: rgba(59, 130, 246, 0.5);
     --hover-color: white;
 
     // invert colour on hover for consistency

@@ -1,9 +1,1 @@
-{% extends "base.html" %}
-
-{% block main_content %}
-    {% if section.extra.section_path -%}
-        {% set section = get_section(path=section.extra.section_path) %}
-    {% endif -%}
-
-    {{ macros::list_posts(pages=section.pages) }}
-{% endblock main_content %}
+{% extends "home.html" %}

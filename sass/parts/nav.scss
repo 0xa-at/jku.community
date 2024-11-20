@@ -38,8 +38,7 @@ header .main {
     margin-bottom: 5px;
 }
 
-header .social img,
-header #dark-mode-toggle img {
+header .social img {
     width: 16px;
     height: 16px;
 }
@@ -49,8 +48,28 @@ header .socials {
     /* Space between social icons and menu items */
 }
 
-#dark-mode-toggle {
-    justify-content: center;
+.socials {
+    /* flex-child */
+    flex-grow: 0;
+    /* flex-container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.social {
+    border-bottom: unset;
+    background-image: unset;
+    padding: 2px;
+}
+
+.social > img {
+    border: unset;
+    width: 24px;
+    height: 24px;
 }
 
 /* Mobile-specific adjustments */

@@ -4,13 +4,12 @@ title = "jku.community"
 compile_sass = true
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
 
 [extra]
-# Put all your custom variables here
-
+socials = [
+{ name = "github", url = "https://github.com/not-matthias/", icon = "github" },
+]
 menu = [
-    { name = "About us", url = "/about", weight = 1 }
+    { name = "/linz", url = "/linz", weight = 1 },
+    { name = "/about", url = "/about", weight = 2 },
 ]

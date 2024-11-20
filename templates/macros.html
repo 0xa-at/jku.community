@@ -4,10 +4,22 @@
     <li class="club-item">
         <section>
             <div class="club-header">
+                <!-- List the categories on the right -->
+                <div class="category-container" style="float: right;">
+                    {% if page.extra.category %}
+                    <div class="category-list">
+                        {% for category in page.extra.category %}
+                            <!-- TODO: Make this a link to the overview -->
+                            <span class="category">#{{ category }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
                 <h2 class="club-title" style="margin-bottom: 0">
                     <!-- Either link to the page or the website -->
-                    {% if page.link_to %}
-                        <a href={{ page.link_to }}>{{page.title}}</a>
+                    {% if page.extra.link_to %}
+                        <a href={{ page.extra.link_to }}>{{page.title}}</a>
                     {% else %}
                         <a href={{ page.permalink }}>{{page.title}}</a>
                     {% endif %}
