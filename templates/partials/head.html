@@ -21,22 +21,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
 
-    {# Analytics #}
+    {# Analytics, taken from not-matthias/apollo #}
     {% if config.extra.analytics.enabled %}
         {% if config.extra.analytics.umami.website_id %}
             {% set website_id = config.extra.analytics.umami.website_id %}
-            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://analytics.eu.umami.is") %}
+            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://api-gateway.umami.dev/") %}
 
-            <script>
-                (function () {
-                    var el = document.createElement('script');
-                    el.setAttribute('src', '/js/imamu.js');
-                    el.setAttribute('data-website-id', '{{ website_id }}');
-                    el.setAttribute('data-host-url', '{{ host_url }}');
-                    document.body.appendChild(el);
-                })();
-                </script>
-            <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
+            <script defer src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
         {% endif %}
 
         {% if config.extra.analytics.goatcounter.user %}
