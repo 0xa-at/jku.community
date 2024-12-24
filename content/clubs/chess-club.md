@@ -1,5 +1,6 @@
 +++
 title = "JKU Chess Club"
+description = "A vibrant space for students to connect over their love of chess through games and tournaments."
 
 [extra]
 link_to = "https://jku-chessclub.at/"

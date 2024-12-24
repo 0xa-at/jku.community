@@ -1,6 +1,6 @@
 +++
 title = "QuacK"
-description = "Queere Studierende an der JKU"
+description = "The queer students initiative on campus."
 
 [extra]
 link_to = "https://quack.lgbt/"
