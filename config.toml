@@ -1,4 +1,4 @@
-base_url = "https://0xa-at.github.io/jku.community"
+base_url = "https://0xa-at.github.io/jku.community/"
 build_search_index = false
 title = "jku.community"
 compile_sass = true
