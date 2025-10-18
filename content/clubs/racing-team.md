@@ -5,5 +5,5 @@ description = "JKU Racing is a Formula Student Team from Johannes Kepler Univers
 
 [extra]
 link_to = "https://jkuracing.at/"
-category = ["tech", "science", "sports]
+category = ["tech", "science", "sports"]
 +++
