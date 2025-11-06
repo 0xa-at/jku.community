@@ -10,7 +10,6 @@ socials = [
 { name = "github", url = "https://github.com/0xa-at/jku.community", icon = "github" },
 ]
 menu = [
-    { name = "/linz", url = "/linz", weight = 1 },
     { name = "/about", url = "/about", weight = 2 },
 ]
 
