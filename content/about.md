@@ -1,25 +1,31 @@
 +++
 title = "About"
-path = "about"
+path = "about" 
 +++
 
-# The Problem
+# Many clubs, one community.
+jku.community is where student organizations live, breathe, and get discovered. Our board? Students like you, making decisions that actually matter for the clubs that create the best experiences on campus. Think of us as your club HQ: one platform to rule them all! Where you can discover every student organization, see what they're about, and find your own community at JKU.
 
-Ever since I started studying, I've heard these sentences a lot:
-- "I never heard about this association"
-- "I wish there was a club for XYZ"
-- "Why isn't there a website for all the clubs?"
+## What We Built
+A directory that should have existed long before. No more "wait, we have a ___ club?" moments. Explore all the clubs, find out how to get involved, create more memories at JKU!
 
-# The Solution
+## Who Benefits
+**Students**: Browse clubs by interest, vibe, or pure curiosity. Your community is here! You just haven't met them yet.
 
-This website should be the answer to all the questions above. **It should be _the_ directory of all clubs at JKU and Linz.** In the future, we can also add support for listing events, as this is also a common problem that I and many others are often facing.
+**Clubs**: Stop being JKU's best-kept secret. Get found by the students who've been looking for you!
 
+**Professor? Company? Institution?** Direct line to engaged student communities ready to collaborate, learn, or build something together.
 
+Built by students, for students. Maintained by students who care about this stuff.
 # You can help! 🚀
 
-This project is [open source](https://github.com/0xa-at/jku.community) and accepts contributions from everyone. If you want to add a club or new features, just create an issue or open a pull request!
+This project is [open source](https://github.com/0xa-at/jku.community) and accepts contributions from everyone. If you want to add a club or new features, just create an issue or open a pull request and make sure to
+<a href="#" onclick="window.location.href='mailto:' + 'contact' + '@' + 'jku' + '.' + 'community'; return false;">
+  send us an email
+</a>.
 
+<noscript>contact [at] jku.community</noscript>
 
 ---
 
-This project is brought to you by the [0xA Science Association](https://0xa.at) and developed by [not-matthias](https://github.com/not-matthias).
+This project was initialized by [0xA Science Association](https://0xa.at) and originally developed by [not-matthias](https://github.com/not-matthias).
