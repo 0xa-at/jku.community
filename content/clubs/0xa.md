@@ -5,5 +5,5 @@ weight = 0
 
 [extra]
 link_to = "https://0xa.at/"
-category = ["tech"]
+category = ["tech", "science"]
 +++
